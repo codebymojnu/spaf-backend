@@ -1,4 +1,4 @@
-const memberData = require('../models/Message');
+const memberData = require('../models/Member');
 
 // Controller to create a new gift data entry
 exports.creatememberData = async (req, res) => {

@@ -28,9 +28,9 @@ const memberDataSchema = new mongoose.Schema({
         default: formatTime // Set the default value to the formatted time
     },
     name: String,
-    email: String,
-    subject: String,
-    message: String,
+    phoneEmail: String,
+    whyMember: String,
+    address: String
 });
 
 module.exports = mongoose.model('memberData', memberDataSchema);

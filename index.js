@@ -5,7 +5,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const authRoute = require('./routes/authRoute');
 const messageDataRoute = require('./routes/messageDataRoute');
-const memberRequestDataRoute = require('./routes/memberRequestDataRoute');
+const memberDataRoute = require('./routes/memberDataRoute');
 const donationDataRoute = require('./routes/donationDataRoute');
 
 
@@ -28,11 +28,11 @@ mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology
 // Mount routes
 app.use('/api/auth', authRoute); // Example route prefix
 app.use('/api/messages', messageDataRoute);
-app.use('/api/member-requests', memberRequestDataRoute);
+app.use('/api/member-requests', memberDataRoute);
 app.use('/api/donations', donationDataRoute);
 
 // Start the server
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
